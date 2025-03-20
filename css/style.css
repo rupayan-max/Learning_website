@@ -257,6 +257,19 @@
   width: 100%;
   border-radius: 1.3rem;
   transition-duration: 0.5s;
+  animation: lefttoright 1s ease forwards;
+  opacity:0;
+}
+
+@keyframes lefttoright {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 .hero_right_container {
@@ -264,7 +277,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: rightleft 1s ease forwards;
+  opacity:0;
 }
+@keyframes rightleft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .hero_right_container_content {
   font-family: var(--fontstyle);
   font-weight: bold;
